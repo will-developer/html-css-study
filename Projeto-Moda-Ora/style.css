@@ -1,0 +1,163 @@
+html {
+    font-size: 62.5%;
+
+}
+
+:root {
+    --header-background: #162028;
+    --nav-text: #425564;
+
+    --content-text: #555;
+    --article-background: #003d52;
+
+    --footer-background: #0b171f;
+    --footer-text: #6f8597;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+    overflow-x:hidden;
+}
+
+.header__img img {
+    width: 100%;
+    height: 30em;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-background);
+    color: white;
+}
+
+.header__logo h1 {
+    font-size: 2.5em;
+    font-family: 'Roboto';
+    font-weight:lighter;
+    margin-left: 20rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.header__nav-link {
+    list-style: none;
+    margin-right: 5rem;
+}
+
+.header__info {
+    display: flex;
+    gap: 8rem;
+    letter-spacing: .3rem;
+    font-size: .8em;
+
+}
+
+.header__info a {
+    color: var(--nav-text);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 70vw;
+    margin: 5vw auto;
+}
+
+.page__scope {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__title {
+    font-size: 6rem;
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+}
+
+.page__content {
+
+    text-align: center;
+    line-height: 1.5;
+    margin: 10rem 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container__content img {
+    width: 420px;
+}
+
+.container__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__content h2 {
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    font-size: 1em;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.container__content p {
+    margin: 0;
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-family: 'Roboto';
+    font-weight: lighter;
+}
+
+article {
+    background-image: url(imagens/bg_detalhe.png);
+    background-size: cover;
+    background-repeat: round;;
+}
+
+.article__content {
+    padding: 160px;
+    width: 80vw;
+    color: white;
+    font-size: 1.5em;
+}
+
+.article__content h1 {
+    text-transform: uppercase;
+    font-size: 1.9em;
+    font-family: 'Roboto';
+    font-weight: 100;
+    
+}
+
+.article__content p {
+    width: 50vw;
+    line-height: 1.5;
+    text-align: left;
+    font-size: .7em;
+    font-weight: 100;
+
+}
+
+.footer__copyright{
+    background-color: var(--footer-background);
+    text-align: center;
+    color: var(--footer-text);
+    letter-spacing: 3px;
+    padding: 30px; 
+    margin: 0;
+}

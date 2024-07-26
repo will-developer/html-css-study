@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Lógica de programação com JavaScript</h1>
+
+        <button onclick="soma()">+</button>
+
+        <button onclick="subtracao()">-</button>
+
+        <button onclick="multiplicacao()">*</button>
+
+        <button onclick="divisao()">/</button>
+
+        <div id="output"></div>
+
+        <script>
+            var n = parseFloat(prompt("digite um numero"))
+            var output = document.querySelector("#output")
+            output.innerHTML = n
+
+            function soma() {
+                var n2 = parseFloat(prompt("Digite um número"))
+
+                n = n + n2
+
+                output.innerHTML = n
+            }
+
+            function subtracao() {
+                var n2 = parseFloat(prompt("Digite um número"))
+
+                n = n - n2
+
+                output.innerHTML = n
+            }
+
+            function multiplicacao() {
+                var n2 = parseFloat(prompt("Digite um número"))
+
+                n = n * n2
+
+                output.innerHTML = n
+            }
+
+            function divisao() {
+                var n2 = parseFloat(prompt("Digite um número"))
+
+                n = n / n2
+
+                output.innerHTML = n
+            }
+        </script>
+    </body>
+</html>

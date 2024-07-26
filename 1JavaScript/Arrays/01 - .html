@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Logica de programação com Javascript</h1>
+
+        <script>
+            var arr = ["1", 20, 3, 4, 5, "sdh", 20, "30"];
+
+            // var soNumeros = arr.every(function (el, indice, obj) {
+            //     console.log(el);
+            //     console.log("indice", indice);
+            //     console.log(obj);
+            //     return true;
+            // });
+
+            var soNumeros = arr.every(function (el) {
+                return typeof el === "number";
+            });
+
+            console.log(soNumeros);
+
+            /* every():
+                Descrição: Verifica se todos os elementos de um array atendem a uma determinada condição, retornando true se todos atenderem e false caso contrário.
+                Uso no código: Utilizado para verificar se todos os elementos do array são do tipo number */
+
+            var AoMenosUmNumeros = arr.some(function (el) {
+                return typeof el === "number";
+            });
+            console.log(AoMenosUmNumeros);
+
+             /* some():
+                Descrição: Verifica se pelo menos um elemento do array atende a uma determinada condição, retornando true se algum atender e false caso contrário.
+                Uso no código: Utilizado para verificar se pelo menos um elemento do array é do tipo number. 
+             */
+
+            var numeros = arr.filter(function (el, i, arr) {
+                return typeof el === "number";
+            });
+            console.log(numeros);
+             /* filter():
+                Descrição: Cria um novo array com todos os elementos que atendem a uma determinada condição.
+                Uso no código: Utilizado para criar um novo array contendo apenas os elementos do tipo number
+             */
+
+            arr.forEach(function (el, i, arr) {
+                console.log(`el== ${el} || i== ${i} || i - ${arr.toString()}`);
+            });
+             /* forEach():
+                Descrição: Executa uma função para cada elemento do array.
+                Uso no código: Utilizado para imprimir informações sobre cada elemento do array.
+             */
+
+            var posicaoStr1 = arr.indexOf(20, 5);
+            console.log(posicaoStr1);
+             /* indexOf():
+                Descrição: Retorna o primeiro índice em que um elemento é encontrado no array, ou -1 se não for encontrado.
+                Uso no código: Utilizado para encontrar a primeira ocorrência do número 20 a partir do índice 5.
+             */
+
+            var posicaoStr2 = arr.lastIndexOf(20, 5);
+            console.log(posicaoStr2);
+             /* lastIndexOf():
+                Descrição: Retorna o último índice em que um elemento é encontrado no array, ou -1 se não for encontrado.
+                Uso no código: Utilizado para encontrar a última ocorrência do número 20 a partir do índice 5.
+             */
+
+            console.log(numeros);
+            numeros = numeros.map(function (el, i, arr) {
+                return el * i;
+            });
+            console.log(numeros);
+             /* map():
+                Descrição: Cria um novo array com os resultados da aplicação de uma função em cada elemento do array.
+                Uso no código: Utilizado para multiplicar cada elemento pelo seu índice.
+             */
+
+            var arr2 = arr.concat(numeros, "olá", "mundo");
+            console.log(arr2);
+             /* concat():
+                Descrição: Concatena um ou mais arrays criando um novo array resultante.
+                Uso no código: Utilizado para concatenar o array numeros com outros elementos.
+             */
+
+            var str = arr2.join(" -- "); //join msm coisa que toString porem posso usar um caractere separador
+            console.log(str);
+             /* join():
+                Descrição: Une todos os elementos de um array em uma única string, separados por um delimitador.
+                Uso no código: Utilizado para criar uma string com todos os elementos separados por " -- ".
+             */
+
+            arr.push("novo item", 5);
+            console.log(arr);
+             /* push():
+                Descrição: Adiciona um ou mais elementos ao final de um array e retorna o novo comprimento do array.
+                Uso no código: Utilizado para adicionar elementos ao final do array arr.
+             */
+
+            var UltimoItem = arr.pop();
+            console.log(UltimoItem);
+            console.log(arr);
+             /* pop():
+                Descrição: Remove o último elemento de um array e retorna esse elemento.
+                Uso no código: Utilizado para remover o último elemento do array arr.      
+             */
+
+            var PrimeiroItem = arr.shift();
+            console.log(PrimeiroItem);
+            console.log(arr);
+             /* shift():
+                Descrição: Remove o primeiro elemento de um array e retorna esse elemento.
+                Uso no código: Utilizado para remover o primeiro elemento do array arr.
+             */
+
+            arr.unshift(true, false, "unshift"); // contrario de push
+            console.log(arr);
+             /* unshift():
+                Descrição: Adiciona um ou mais elementos ao início de um array e retorna o novo comprimento do array.
+                Uso no código: Utilizado para adicionar elementos ao início do array arr.
+             */
+
+            numeros.shift();
+            var somaDeArr = numeros.reduce(function (anterior, atual, i) {
+                console.log(`anterior ${anterior} || atual ${atual} || i ${i}`);
+                return anterior + atual + i;
+            }, 10);
+
+            console.log(numeros);
+            console.log(somaDeArr);
+             /* reduce():
+                Descrição: Aplica uma função a um acumulador e a cada elemento do array (da esquerda para a direita), retornando um único valor.
+                Uso no código: Utilizado para calcular a soma dos elementos do array numeros.
+             */
+
+            var testeReduce = ["1", "2", "3"].reduceRight(function (i, a) {
+                return i + a;
+            });
+            console.log(testeReduce);
+             /* reduceRight():
+                Descrição: Similar ao reduce(), mas percorre o array da direita para a esquerda.
+                Uso no código: Utilizado para concatenar os elementos do array de strings.
+             */
+
+            var arr5 = [10, 20, 30];
+            arr5.reverse();
+            console.log(arr5);
+             /* reverse():Fjo
+                Descrição: Inverte a ordem dos elementos em um array.
+                Uso no código: Utilizado para inverter a ordem dos elementos do array arr5
+             */
+
+            arr4 = [1, 2, 3, 4, 5, 6, 7];
+            var slice = arr4.slice(4, 6);
+            console.log(arr4);
+            console.log(slice);
+             /* slice():
+                Descrição: Retorna um novo array contendo uma cópia de uma porção do array original, especificada pelos índices de início e fim.
+                Uso no código: Utilizado para criar um novo array slice a partir do array arr4.
+             */
+
+            arr4.splice(2, 3, "limao", "açucar"); // incluir, excluir, colocar no lugar dos excluidos
+            console.log(arr4);
+             /* splice():
+                Descrição: Altera o conteúdo de um array removendo, substituindo ou adicionando elementos em posições específicas.
+                Uso no código: Utilizado para remover elementos do array arr4 e adicionar novos elementos.
+             */
+        </script>
+    </body>
+</html>

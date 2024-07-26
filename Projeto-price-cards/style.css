@@ -1,0 +1,169 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.772);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    background: rgba(0, 0, 0, 0.791);
+    width: 1290px;
+    align-items: center;
+    justify-content: center;
+    gap: 600px;
+}
+
+.company-logo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 140%;
+    padding: 0 20px;
+    letter-spacing: 2px;
+}
+
+.display {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 120%;
+
+}
+
+.display a.display-actually {
+    background-color: rgb(81, 160, 74);
+    padding: 20px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    pointer-events: none;
+}
+
+.display li {
+    margin-left: 10px;
+}
+
+.display a:hover {
+    text-decoration: underline;
+}
+
+.display a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo-principal {
+    font-size: 300%;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 4px 4px 4px #5aff5167;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.list {
+    background: rgba(0, 0, 0, 0.575);
+    border-radius: 10px;
+    list-style: none;
+    padding: 20px 30px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    font-size: 170%;
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.itens-classificados {
+    flex-grow: 1;
+    margin-bottom: 40px;
+    margin-top: -15px;
+    font-size: 60%;
+    margin-left: 20px;
+}
+
+.itens {
+    list-style-type: none;
+    position: relative;
+}
+
+.itens:before {
+    content: '•';
+    font-size: 25px;
+    display: inline-block;
+    position: absolute;
+    left: -1em;
+    top: -.25em;
+    color: #5aff51;
+}
+
+
+.info {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -30px;
+    gap: 5px;
+    list-style: decimal;
+    border-top: 3px solid #5aff51;
+}
+
+.mounth {
+    font-size: 60%;
+    margin-top: 45px;
+}
+
+.buttom {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.buttom a {
+    text-decoration: none;
+    color: black;
+    font-size: 90%;
+    font-weight: 550;
+    padding: 20px 118px;
+    background: #5aff51;
+    border-radius: 20px;
+}
+
+.buttom a:hover {
+    outline: 2px solid #5aff51;
+    background-color: transparent;
+    color: white;
+}

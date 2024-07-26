@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de contato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form class="formulary">
+        <div class="border">
+            <fieldset class="container">
+                <legend class="title">Formulário de contato</legend>
+
+                <label for="name">Seu nome completo:</label>
+                <input class="square tam" type="text" id="name" name="name" placeholder="Ex: João Antônio Ribeiro" required
+                    autofocus autocomplete="off">
+
+                <label for="email">E-mail:</label>
+                <input class="square tam" type="email" id="email" name="e-mail" placeholder="Ex: joao_antonio@formulario.com"
+                    required autocomplete="off">
+
+                <label for="assunto">Assunto:</label>
+                <input class="square tam" type="assunto" id="assunto" name="assunto" maxlength="150"
+                    placeholder="Ex: Problema com o site de busca" required autocomplete="off">
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea class="square msg" name="mensagem" id="mensagem" rows="15" required></textarea autocomplete="off">
+
+                <div class="btn">
+                    <button type="submit" name="buttom" value="buttom"><em>Enviar</em></button>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+
+</body>
+
+</html>

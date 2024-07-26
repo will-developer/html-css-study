@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+
+    <style>
+        body {
+            margin-bottom: 100vh;
+        }
+
+        div {
+            outline: 1px solid #888;
+            width: 80%;
+            height: 200px;
+            margin: .5em auto;
+        }
+
+        p {
+            width: 100%;
+        }
+
+        .destaque {
+            background-color: yellow;
+        }
+
+        .div1 .destaque {
+            transform: translate(50%, 50%)
+                /* Parceido com o position relative porém um é diferente do outro sendo que o (transform) usa como base as dimensões do proprio elemento, nesse caso o .destaque  */
+        }
+
+        .div2 .destaque {
+            position: relative;
+            left: 20%;
+            top: 100%;
+
+            /* Enquanto a relative usa as dimensões do elemento pai, nesse caso seria a DIV */
+        }
+
+        .div3 .destaque {
+            transform: rotate(-15deg);
+            /* Rotaciona o elemento (usar DEG como unidade de medida) */
+        }
+
+        .div4 .destaque {
+            transform: scale(.5, 2);
+            /* Diminui e aumenta o tamanho em escala sendo que 1 é o default, 2 é o dobro */
+        }
+
+        .div5 .destaque {
+            transform: skew(15deg, 10deg);
+            /* Ele distorce em graus o elemento */
+        }
+
+        .div6 .destaque {
+            /* transform: translate(150px);
+            transform: rotate(45deg); ASSIM SOBRE-ESCREVE, FORMA INCORRETA*/
+
+            transform: translate(100px) rotate(45deg);
+            /* Lembrando que a ordem é importante pois ela interfere na posição*/
+
+            transform-origin: left bottom;
+            /* Adicionado novo comando acima que muda o ponto de origem que é central */
+        }
+
+        .div7 .destaque {
+            transform: rotate(45deg) translate(100px);
+            /* Aqui primeiro rotacionou o elemento e depois ele "transladou" ou seja, primeiro rotacionou, trocou a posição e depois ele deslocou no vetor em que o valor do rotate insidiu sobre o elemento */
+
+            transform-origin: 0 bottom;
+            /* Adicionado novo comando acima que muda o ponto de origem que é central */
+
+            /* Posso colocar valores também, antes estava left bottom (NAO ALTEROU NADA) */
+
+            /* posso usar % também */
+
+            /* é mais usado nomes do que valores ou seja (top > 0) */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+    </div>
+
+    <div class="div2">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+    </div>
+    <div class="div3">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+    </div>
+
+    <div class="div4">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+    </div>
+
+    <div class="div5">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+    </div>
+    
+    <div class="div6">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+    </div>
+    
+    <div class="div7">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ut?</p>
+    </div>
+
+
+</body>
+</html>

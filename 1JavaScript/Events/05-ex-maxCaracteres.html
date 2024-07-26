@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <style>
+        .none {
+            display: none;
+        }
+    </style>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <textarea name="" id="msg" cols="50" rows="10" maxlength="150"></textarea>
+        <br />
+        <div class="none">Restam <span id="resta"></span> caracteres</div>
+
+        <script>
+            (() => {
+                "use strict";
+
+                var $txtMsg = document.querySelector("#msg");
+                var $resta = document.querySelector("#resta");
+                var $none = document.querySelector(".none");
+                $none.style.display = "unset";
+
+                var maxima = $txtMsg.maxLength;
+
+                $resta.textContent = maxima;
+
+                $txtMsg.addEventListener("input", checkLenght);
+
+                function checkLenght(e) {
+                    var numeroLettradDigitadas = this.value.length;
+                    $resta.textContent = maxima - numeroLettradDigitadas;
+                }
+            })();
+        </script>
+    </body>
+</html>

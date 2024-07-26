@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Lógica de programação com JavaScript</h1>
+
+        <script>
+            var n1 = parseFloat(prompt("Write your first grade"))
+
+            var n2 = parseFloat(prompt("Write your second grade"))
+
+            var average = (n1 + n2) / 2
+
+            // if ((n1 > 0 && n2 > 0) && (average > 5)) {
+            //     alert("Approved")
+            // } else {
+            //     alert("Disapproved")
+            // }
+
+            if (n1 == 0 || n2 == 0 || average <= 5) {
+                alert("Disapprove")
+            } else {
+                alert ("Approve")
+            }
+        </script>
+    </body>
+</html>

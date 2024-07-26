@@ -1,0 +1,25 @@
+a[href^="http"]::after{
+    content: url(imagens/newWindow-icon.png);
+}
+
+a[href$=".pdf"]::before{
+    content: url(imagens/pdf-icon.gif);
+
+}
+
+input[type="checkbox"]:checked + label {
+  color: rgb(0, 26, 255);
+}
+
+input[type="checkbox"]:checked:not(:disabled) + label {
+  color: green;
+}
+
+input[type="checkbox"]:not(:disabled) + label {
+  color: rgb(255, 0, 0);
+}
+
+ul > li:nth-of-type(3){
+    background-color: yellow;
+}
+

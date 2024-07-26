@@ -1,0 +1,87 @@
+:root {
+  --backgoundo-color: hsl(0, 45%, 31%);
+  --white-variation: #e2e2e2;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--backgoundo-color);
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+
+h1 {
+  margin: 5rem;
+  text-align: center;
+  color: var(--white-variation);
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.container {
+  width: 150rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.content {
+  position: relative;
+  background-color: var(--white-variation);;
+  padding: 6rem 8rem;
+  flex: 1 0;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 45px solid var(--backgoundo-color);
+  border-right: 45px solid var(--white-variation);
+}
+
+.content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 45px solid transparent;
+  border-right: 45px solid var(--white-variation);
+}
+
+
+.container:nth-of-type(2) .content::before {
+  border-top: 45px solid var(--backgoundo-color);
+}
+
+.container:nth-of-type(2) .content::after{
+  border-top: 45px solid transparent;
+  border-right: 45px solid rgba(0, 0, 0, 0.303);
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.593))
+}
+
+.container:nth-of-type(3) .content::before {
+  border-top: 45px solid var(--backgoundo-color);
+}
+
+.container:nth-of-type(3) .content::after {
+  border-top: 45px solid transparent;
+  border-right: 45px solid rgb(233, 233, 233);
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.593))
+}
+
+.content h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+.content p {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}

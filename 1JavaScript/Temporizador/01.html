@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div></div>
+
+        <script>
+            var n = 0;
+
+            function somaUM() {
+                console.log("n", ++n);
+
+                if (n > 10) {
+                    clearInterval(intervalo);
+                }
+            }
+
+            // setTimeout(function () {
+            //     console.log("n", n);
+            // }, 1000);
+
+            var timeout = setTimeout(somaUM, 1000);
+
+            console.log("timeout", timeout);
+
+            var intervalo = setInterval(somaUM, 1000);
+
+            console.log("intervalo", intervalo);
+
+            str = "";
+            var d = document.querySelector("div");
+            var timeoutTeste = setTimeout(function () {
+                for (var i = 0; i < 1000; i++) {
+                    str += "i: " + i + " -- ";
+                    d.textContent += str;
+                }
+            }, 3000);
+        </script>
+    </body>
+</html>

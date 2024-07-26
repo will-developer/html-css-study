@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let dataAtual = new Date();
+            let dia = dataAtual.getDate();
+            let mes = dataAtual.getMonth();
+            let ano = dataAtual.getFullYear();
+
+            let dataBR = (d, m, a) => {
+                m += 1;
+                if (m < 10) {
+                    return console.log(`${d}/${"0" + m}/${a}`);
+                } else {
+                    return console.log(`${d}/${m}/${a}`);
+                }
+            };
+
+            dataBR(dia, mes, ano);
+        </script>
+    </body>
+</html>

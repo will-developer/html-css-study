@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #d1 {
+                background-color: red;
+                padding: 25px;
+            }
+
+            span {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <form action="#" method="post">
+            <label for="txtUser">Usuario</label><input type="text" id="txtUser" name="user" /> <br />
+            <label for="txtPass">Senha</label><input type="password" id="txtPass" name="pass" /> <br />
+            <input type="submit" id="btn" />
+        </form>
+
+        <script>
+            (() => {
+                "use strict";
+                var $form = document.querySelector("form");
+                var $txtUser = document.querySelector("#txtUser");
+                var $txtPass = document.querySelector("#txtPass");
+                var $btn = document.querySelector("#btn");
+
+                $form.addEventListener("submit", function (e) {
+                    if (!$txtUser.value || !$txtPass.value) {
+                        alert("Preencha todos os campos");
+                    }
+                    e.preventDefault();
+                });
+            })();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+    <style>
+        /* input[type=checkbox] {
+            display: none;
+        }
+
+        label {
+            position: relative;
+            padding-left: 20px;
+            cursor: pointer;
+        }
+
+        label span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            background-color: red;
+            border: 1px solid rgba(0, 0, 0, 0.581);
+            border-radius: 4px;
+        }
+
+        label span::before {
+            position: absolute;
+            content: '\2713';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 8px;
+            color: white;
+            opacity: 0;
+        }
+
+        input[type=checkbox]:checked+label span::before {
+            content:"";
+            opacity: 1;
+            background-color: blue;
+            border: 1px solid rgba(0, 0, 0, 0.581);
+            width: 12px;
+            height: 12px;
+            text-align: center;
+            border-radius: 4px;
+        } */
+
+        input[type="checkbox"] {
+            width: 0px;
+            height: 0px;
+            margin-left: -8px;
+        }
+
+
+        .chk1:focus+label span,
+        input[type="checkbox"]:focus+span,
+        .lbl2 input[type="checkbox"]+span:focus::before {
+            outline: 2px solid black;
+            box-sizing: border-box;
+        }
+
+        .chk1+label span,
+        .lbl2 input[type="checkbox"]+span {
+            display: inline-block;
+            font-size: 1rem;
+            width: 1.5em;
+            height: 1.5em;
+            background-color: red;
+            border-radius: 4px;
+        }
+
+
+        .chk1+label span::before,
+        .lbl2 input[type="checkbox"]+span::before {
+            display: inline-block;
+            content: '\2713';
+            font-size: 1em;
+            color: rgb(255, 255, 255);
+            transform: translate(50%, 1px);
+            opacity: 0;
+        }
+
+        .chk1:checked+label span,
+        .lbl2 input[type="checkbox"]:checked+span {
+            display: inline-block;
+            background-color: blue;
+            border-radius: 4px;
+        }
+
+        .chk1:checked+label span::before,
+        .lbl2 input[type="checkbox"]:checked+span::before {
+            opacity: 1;
+        }
+
+
+
+
+        .switch input[type="checkbox"]+span {
+            display: inline-block;
+            font-size: 2rem;
+            width: .98em;
+            height: .55em;
+            border-radius: 25% / 50%;
+            background-image: linear-gradient(to bottom, #000000fd, rgb(187, 0, 0));
+        }
+
+        .switch input[type="checkbox"]:checked+span {
+            display: inline-block;
+            font-size: 2rem;
+            width: .98em;
+            height: .55em;
+            border-radius: 25% / 50%;
+            background-image: linear-gradient(to top, rgb(20, 2, 190) , #000000fd );
+        }
+
+        .switch input[type="checkbox"]+span::before {
+            content: "";
+            display: block;
+            background-color: rgb(255, 255, 0);
+            width: .46em;
+            height: .46em;
+            border-radius: 50%;
+            transform: translate(.05em, .05em);
+            transition: transform .4s;
+        }
+
+        .switch input[type="checkbox"]:checked+span::before {
+            content: "";
+            display: block;
+            background-color: rgb(255, 255, 0);
+            width: .45em;
+            height: .45em;
+            border-radius: 50%;
+            transform: translate(.475em, .05em);
+        }
+
+        .switch input[type="checkbox"]:focus+span {
+            outline: .04em solid rgb(0, 0, 0);
+            transition: outline .2s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Checkbox</h1>
+
+    <input type="checkbox" id="html" class="chk1" checked>
+    <label for="html">
+        <span></span>
+        HTML
+    </label>
+
+    <input type="checkbox" id="css" class="chk1">
+    <label for="css">
+        <span></span>
+        CSS
+    </label>
+
+    <input type="checkbox" id="javascript" class="chk1">
+    <label for="javascript">
+        <span></span>
+        JavaScript
+    </label>
+
+    <HR>
+    </HR>
+
+    <label class="lbl2">
+        <input type="checkbox" checked>
+        <span></span>
+        HTML
+    </label>
+
+    <label class="lbl2">
+        <input type="checkbox">
+        <span></span>
+        CSS
+    </label>
+
+    <label class="lbl2">
+        <input type="checkbox">
+        <span></span>
+        JavaScript
+    </label>
+
+    <HR>
+    </HR>
+
+    <label class="switch">
+        <input type="checkbox" checked>
+        <span></span>
+        HTML
+    </label>
+
+    <label class="switch">
+        <input type="checkbox">
+        <span></span>
+        CSS
+    </label>
+
+    <label class="switch">
+        <input type="checkbox">
+        <span></span>
+        JavaScript
+    </label>
+
+    <br>
+    <br><br><br><br><br><br><br><br><br>
+
+
+
+</body>
+
+</html>

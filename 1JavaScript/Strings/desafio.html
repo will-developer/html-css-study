@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>dd</title>
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, officiis similique. Cum ducimus exercitationem, molestiae rem dolorem earum voluptatem reprehenderit!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, officiis similique. Cum ducimus exercitationem, molestiae rem dolorem earum voluptatem reprehenderit!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, officiis similique. Cum ducimus exercitationem, molestiae rem dolorem earum voluptatem reprehenderit!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio dicta voluptatum minima? Cumque ex exercitationem numquam quia? Iure alias error tempore repellendus asperiores enim ad aut eaque quibusdam laudantium, accusamus sed. Sequi atque sapiente tempore itaque voluptatibus totam odit perspiciatis ex voluptate! Iusto quibusdam facilis distinctio sed quasi corporis rerum illum quia minus at nam, quam ipsum! Cupiditate itaque quo, illo praesentium quisquam temporibus sed asperiores quod. Ea doloribus doloremque ducimus dolorem eaque totam in. Soluta quidem delectus, doloremque alias porro commodi laborum omnis, itaque ratione quo blanditiis? Nemo, architecto eius veniam modi ducimus deserunt similique aliquid sequi quibusdam quam at asperiores sint rerum nam possimus corporis quaerat veritatis distinctio vero rem assumenda saepe quasi cumque officiis. Explicabo repellendus in unde modi ut maxime sit esse! Officia tenetur quos minima, laudantium non quas dicta necessitatibus voluptates dolorum officiis voluptatum corrupti labore ad libero repudiandae est dolor dolores in! Hic magni perferendis incidunt quas? Deleniti, quasi qui corrupti officiis laudantium ad blanditiis, optio iste maiores dicta suscipit cupiditate velit asperiores? Aspernatur quia quod aliquam nihil officia quam magni porro reprehenderit minima ipsum veritatis dolorem dicta ipsa, libero quis! Cum hic dolorum aspernatur, quaerat porro possimus mollitia veniam soluta sequi assumenda earum sapiente, provident voluptate ab quae deserunt et incidunt beatae!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio dicta voluptatum minima? Cumque ex exercitationem numquam quia? Iure alias error tempore repellendus asperiores enim ad aut eaque quibusdam laudantium, accusamus sed. Sequi atque sapiente tempore itaque voluptatibus totam odit perspiciatis ex voluptate! Iusto quibusdam facilis distinctio sed quasi corporis rerum illum quia minus at nam, quam ipsum! Cupiditate itaque quo, illo praesentium quisquam temporibus sed asperiores quod. Ea doloribus doloremque ducimus dolorem eaque totam in. Soluta quidem delectus, doloremque alias porro commodi laborum omnis, itaque ratione quo blanditiis? Nemo, architecto eius veniam modi ducimus deserunt similique aliquid sequi quibusdam quam at asperiores sint rerum nam possimus corporis quaerat veritatis distinctio vero rem assumenda saepe quasi cumque officiis. Explicabo repellendus in unde modi ut maxime sit esse! Officia tenetur quos minima, laudantium non quas dicta necessitatibus voluptates dolorum officiis voluptatum corrupti labore ad libero repudiandae est dolor dolores in! Hic magni perferendis incidunt quas? Deleniti, quasi qui corrupti officiis laudantium ad blanditiis, optio iste maiores dicta suscipit cupiditate velit asperiores? Aspernatur quia quod aliquam nihil officia quam magni porro reprehenderit minima ipsum veritatis dolorem dicta ipsa, libero quis! Cum hic dolorum aspernatur, quaerat porro possimus mollitia veniam soluta sequi assumenda earum sapiente, provident voluptate ab quae deserunt et incidunt beatae!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio dicta voluptatum minima? Cumque ex exercitationem numquam quia? Iure alias error tempore repellendus asperiores enim ad aut eaque quibusdam laudantium, accusamus sed. Sequi atque sapiente tempore itaque voluptatibus totam odit perspiciatis ex voluptate! Iusto quibusdam facilis distinctio sed quasi corporis rerum illum quia minus at nam, quam ipsum! Cupiditate itaque quo, illo praesentium quisquam temporibus sed asperiores quod. Ea doloribus doloremque ducimus dolorem eaque totam in. Soluta quidem delectus, doloremque alias porro commodi laborum omnis, itaque ratione quo blanditiis? Nemo, architecto eius veniam modi ducimus deserunt similique aliquid sequi quibusdam quam at asperiores sint rerum nam possimus corporis quaerat veritatis distinctio vero rem assumenda saepe quasi cumque officiis. Explicabo repellendus in unde modi ut maxime sit esse! Officia tenetur quos minima, laudantium non quas dicta necessitatibus voluptates dolorum officiis voluptatum corrupti labore ad libero repudiandae est dolor dolores in! Hic magni perferendis incidunt quas? Deleniti, quasi qui corrupti officiis laudantium ad blanditiis, optio iste maiores dicta suscipit cupiditate velit asperiores? Aspernatur quia quod aliquam nihil officia quam magni porro reprehenderit minima ipsum veritatis dolorem dicta ipsa, libero quis! Cum hic dolorum aspernatur, quaerat porro possimus mollitia veniam soluta sequi assumenda earum sapiente, provident voluptate ab quae deserunt et incidunt beatae!</p>
+
+        <script>
+            var $p = document.querySelectorAll("p");
+
+            for (i = 0; i < $p.length; i++) {
+                var length = $p[i].textContent.length;
+                console.log("quantos length tem os paragrafos = ", length);
+
+                if (length > 200) {
+                    $p[i].textContent = $p[i].textContent.slice(0, 200) + "[...]";
+                }
+            }
+        </script>
+    </body>
+</html>

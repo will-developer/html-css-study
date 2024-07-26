@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <script>
+            (function () {
+                function calcularIMC(peso, altura, callback) {
+                    var imc = peso / (altura * altura);
+
+                    if (callback && typeof callback === "function") {
+                        return callback(imc);
+                    }
+
+                    console.log("nao passou callback");
+                    return imc;
+                }
+
+                function classificaIMC(imc) {
+                    switch (true) {
+                        case imc <= 16.9:
+                            return "Abaixo do peso muito grave";
+                            break;
+                        case imc <= 18.4:
+                            return "Abaixo do peso";
+                            break;
+                        case imc <= 24.9:
+                            return "Peso normal";
+                            break;
+                        case imc <= 29.9:
+                            return "Sobrepeso";
+                            break;
+                        case imc <= 34.9:
+                            return "Obesidade Grau 1 (Moderada)";
+                            break;
+                        case imc <= 39.9:
+                            return "Obesidade Grau 2 (Severa)";
+                            break;
+                        default:
+                            return "Obesidade Grau 3 (Muito Severa)";
+                    }
+                }
+
+                var peso = 65;
+                var altura = 1.75;
+
+                var imc = calcularIMC(peso, altura, classificaIMC);
+
+                console.log("classificacao IMC: ", imc);
+            })();
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript</h1>
+    </body>
+</html>

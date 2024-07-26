@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Maven+Pro:wght@400;600;800&display=swap');
+
+:root {
+    --hf-color: #2a2a2a;
+    --buttom-navsize: 1rem;
+    --blue: #003464;
+    --title: 4.25rem;
+    --subtitle-size: 2.5rem;
+    --cardtitle-size: 1.5rem;
+    --cardinfo-size: 1rem;
+    --butom-size: 1.3rem;
+    --section-size: 1.3rem;
+    --buttom-color: #FED001;
+    --white: #FFFFFF;
+}
+
+body,
+html {
+    margin: 0;
+}
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--hf-color);
+    padding: 0.625rem 9.375rem;
+}
+
+.fixed {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.wrapperid {
+    padding-top: 5rem;
+}
+
+.displayheader ul {
+    display: flex;
+    list-style: none;
+}
+
+.displayheader a {
+    margin: 0.313rem;
+    border: var(--buttom-color) 1px solid;
+    color: var(--buttom-color);
+    padding: 0.625rem 1.125rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo__img {
+    height: 5.625rem;
+}
+
+.begginer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to bottom, #FFFFFF, #FFFF38);
+}
+
+.main__title h1 {
+    font-size: 4.25rem;
+    width: 35.625rem;
+    line-height: 5.5rem;
+}
+
+.buttom a {
+    padding: 1rem 3rem;
+    background-color: var(--buttom-color);
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.titlecourse h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.containercatalog {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info__catalog {
+    flex-basis: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.114);
+    border-radius: 10px
+}
+
+.info__catalog h3 {
+    font-size: 1.5rem;
+    margin: 1.875rem 1.563rem;
+}
+
+.info__catalog p {
+    margin: 0 1.563rem 3.125rem;
+    text-align: justify;
+}
+
+.buttommore {
+    text-align: center;
+    margin: 5rem 0 7.5rem;
+}
+
+.buttommore a {
+    padding: 1rem 3rem;
+    background-color: var(--buttom-color);
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.infoschool {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--blue);
+
+}
+
+.infoschool img {
+    margin-top: 3.75rem;
+    width: 40%;
+}
+
+.div__info {
+    width: 34.375rem;
+    color: #FAFAFA;
+    padding: 0 4rem;
+
+}
+
+.div__info h2 {
+    font-size: 2.5rem;
+    padding: 2.75rem 0;
+    font-weight: 510;
+}
+
+.div__info p {
+    font-size: 1.125rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 2;
+    margin-top: -1rem;
+}
+
+
+.contactmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containermap {
+    width: 180vh;
+    margin-bottom: 1.875;
+}
+
+.containermap h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.containermap img {
+    width: 100%;
+    margin-bottom: 1.563rem;
+}
+
+.infocontact {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 1.125rem;
+}
+
+.infocontact p {
+    margin: 0.313rem;
+    margin-top: 0.7rem;
+    font-size: 1.125rem;
+    font-family: 'Inter', sans-serif;
+}
+
+footer {
+    background-color: var(--hf-color);
+}
+
+footer p {
+    text-align: center;
+    padding: 2.5rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}

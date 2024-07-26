@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <script>
+            function minhaFuncao() {
+                //corpo da função
+            }
+
+            function somar(n1, n2) {
+                //corpo da função
+                return n1 + n2;
+            }
+
+            var soma = somar(10, 20);
+            console.log("resultado: ", soma);
+
+            somar.teste = "propriedade da função";
+
+            console.log(somar.teste);
+
+            // var teste = function (str) {
+            //     console.log("teste", str);
+            // };
+
+            // teste('olá');
+
+            var teste = function (f) {
+                f();
+            };
+
+            teste(function () {
+                console.log("funcao passada por parametro");
+            });
+
+            var teste = function (f) {
+                f(42); // Chama a função passada com o valor 42 como argumento
+            };
+
+            teste(function (numero) {
+                console.log("Valor passado: " + numero);
+            });
+
+            console.log("-----------");
+
+            var x = 0;
+            var y;
+
+            function mostraX() {
+                var x = 10; // escopo local
+                var y = 20;
+                console.log("mostra x dentro: ", x);
+                console.log("mostra y dentro: ", y);
+            }
+
+            mostraX(); //chama função x = 10
+
+            console.log("mostra x fora: ", x);
+            console.log("mostra y fora: ", y);
+
+            function init() {
+                //
+                var isValid = false;
+            }
+            init();
+
+            //IIFE
+            (function () {
+                "use strict"; // não permite que eu deixei as variaveis sem o "var" pois se não tiver o "var" a variavel se tornará global e isso é uma má pratica, o use strict não permitira que o codigo seja compilado
+                //(((Se usar o 'use strict' fora da função, ele abrangerá todos os arquivos js, isso pode quebrar o codigo caso tenha uma variavel global dentro de uma função)))
+                var isValid = false;
+                console.log(isValid);
+
+                function somar() {
+                    console.log(arguments);
+                    var result = 0;
+                    var x = 0;
+
+                    while (arguments[x]) {
+                        //result = result + arguments[x]
+                        result += arguments[x];
+                        //x = x + 1
+                        x++;
+                    }
+                    console.log("result: ", result);
+                }
+                somar(20, 20, 10, 30, 20, 10);
+            })();
+        </script>
+    </head>
+
+    <body>
+        <h1>Curso Javascript Completo</h1>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Lógica de programação com JavaScript</h1>
+
+        <script>
+            // player 1 - write a number
+            // player 2 - write another number
+            //= numbers equal is draw
+            // = draw a number
+
+            // if the draw numbers is 0, win who chose the smallest number
+            // if the draw number is 1, win who chose the largest number
+
+            var n1 = parseInt(prompt("Player one, write a number: "))
+            var n2 = parseInt(prompt("Player two, write a number: "))
+
+            var randomInt = parseInt(Math.random() * 2)
+
+            if (n1 == n2) {
+                alert("Draw")
+            } else {
+                alert("random number (between 0 and 1): " + randomInt)
+
+                if ((randomInt == 0 && n1 < n2) || (randomInt == 1 && n1 > n2)) {
+                    alert("The winner is the player one")
+                } else {
+                    alert("The winner is the player two")
+                }
+            }
+        </script>
+    </body>
+</html>

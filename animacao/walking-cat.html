@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Walking-Cat</title>
+        <style>
+            .cat {
+                width: 400px;
+                height: 200px;
+                background-image: url(walking_sprite.png);
+                background-position: 0 0;
+                background-repeat: no-repeat;
+
+                animation: anda 1s steps(12) infinite;
+
+                transform: scaleX(-1);
+            }
+
+            @keyframes anda {
+                from {
+                    background-position: 0 0;
+                }
+
+                to {
+                    background-position: 0 -2390px;
+                }
+            }
+
+            .cat2 {
+                width: 400px;
+                height: 200px;
+                background-image: url(walking_sprite.png);
+                background-position: -400px 0;
+                background-repeat: no-repeat;
+
+                animation: anda2 2s steps(6) alternate-reverse infinite;
+
+                transform: scaleX(-1);
+            }
+
+            @keyframes anda2 {
+                from {
+                    background-position: -400px 0;
+                }
+
+                to {
+                    background-position: -400px -1200px;
+                }
+            }
+
+            .cat3 {
+                width: 400px;
+                height: 200px;
+                background-image: url(walking_sprite.png);
+                background-position: -800px 0;
+                background-repeat: no-repeat;
+                animation: anda3 2s steps(12) infinite;
+                transform: scaleX(-1);
+            }
+
+            @keyframes anda3 {
+                from {
+                    background-position: -800px 0;
+                }
+
+                to {
+                    background-position: -800px -2390px;
+                }
+            }
+
+            .cat4 {
+                width: 400px;
+                height: 200px;
+                background-image: url(walking_sprite.png);
+                background-position: -1200px 0;
+                background-repeat: no-repeat;
+                animation: anda4 2s steps(13) infinite;
+
+                transform: scaleX(-1);
+            }
+
+            @keyframes anda4 {
+                from {
+                    background-position: -1200px 0;
+                }
+
+                to {
+                    background-position: -1200px -2591px;
+                }
+            }
+
+            /* JUNTANDO AS 4 ANIMAÇÕES EM 1 (4 a 1 e 1 a 4 */
+
+            @keyframes teste1 {
+                from {
+                    background-position: -1200px 0;
+                }
+
+                to {
+                    background-position: -1200px -2591px;
+                }
+            }
+
+            /* reverse */
+            @keyframes teste2 {
+                from {
+                    background-position: -800px 0;
+                }
+
+                to {
+                    background-position: -800px -2390px;
+                }
+            }
+
+            @keyframes teste3 {
+                from {
+                    background-position: 0 0;
+                }
+
+                to {
+                    background-position: 0 -2390px;
+                }
+            }
+
+            @keyframes teste4 {
+                from {
+                    background-position: -400px 0;
+                }
+
+                to {
+                    background-position: -400px -1200px;
+                }
+            }
+
+            /* reverse */
+            @keyframes teste5 {
+                from {
+                    background-position: -400px -1200px;
+                }
+
+                to {
+                    background-position: -400px 0;
+                }
+            }
+
+            @keyframes teste6 {
+                from {
+                    background-position: 0 0;
+                }
+
+                to {
+                    background-position: 0 -2390px;
+                }
+            }
+
+            @keyframes teste7 {
+                from {
+                    background-position: -800px 0;
+                }
+
+                to {
+                    background-position: -800px -2390px;
+                }
+            }
+
+            @keyframes teste8 {
+                from {
+                    background-position: -1200px 0;
+                }
+
+                to {
+                    background-position: -1200px -2591px;
+                }
+            }
+
+            .cat5 {
+                width: 400px;
+                height: 200px;
+                background-image: url(walking_sprite.png);
+                background-position: -1200px 0;
+                background-repeat: no-repeat;
+                transform: scaleX(-1);
+
+                /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+                animation: teste1 1s steps(13), teste2 2s steps(12) 1s, teste3 2s steps(12) 3s, teste4 3s steps(6) 5s, teste5 3s steps(6) 8s, teste6 2s steps(12) 11s, teste7 2s steps(12) 13s, teste8, 1s steps(13);
+            }
+
+            /* 1 a 4 + infinit */
+
+            @keyframes img-animation1 {
+                from {
+                    background-position: 0 0;
+                }
+
+                to {
+                    background-position: 0 -2390px;
+                }
+            }
+
+            @keyframes img-animation2 {
+                from {
+                    background-position: -400px 0;
+                }
+
+                to { 
+                    background-position: -400px -1200px;
+                }
+            }
+
+            /* gambiarra hard, tirei 200 de altura e diminui para 5 passos para evitar da imagem sumir */
+            @keyframes img-animation3 {  
+                from {
+                    background-position: -400px -1000px;
+                }
+
+                to {
+                    background-position: -400px 0;
+                }
+            }
+
+            @keyframes img-animation4 {
+                from {
+                    background-position: -800px 0;
+                }
+
+                to {
+                    background-position: -800px -2390px;
+                }
+            }
+
+            @keyframes img-animation5 {
+                from {
+                    background-position: -1200px 0;
+                }
+
+                to {
+                    background-position: -1200px -2591px;
+                }
+            }
+
+            .cat6 {
+                width: 400px;
+                height: 200px;
+                background-image: url(walking_sprite.png);
+                background-position: -1200px 0;
+                background-repeat: no-repeat;
+                transform: scaleX(-1);
+
+                /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+                animation: 
+                img-animation1 2s steps(12) 0s, 
+                img-animation2 2s steps(6) 2s, 
+                img-animation3 2s steps(5) 4s, 
+                img-animation4 2s steps(12) 6s,
+                img-animation5 2s steps(13) 8s;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="cat"></div>
+        <div class="cat2"></div>
+        <div class="cat3"></div>
+        <div class="cat4"></div>
+        <div class="cat5"></div>
+        <div class="cat6"></div>
+    </body>
+</html>

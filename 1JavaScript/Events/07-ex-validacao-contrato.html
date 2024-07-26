@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <style>
+        .none {
+            display: none;
+        }
+    </style>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <form action="">
+            <textarea cols="50" rows="30" readonly>
+Contrato de prestação de serviço
+            </textarea>
+            <br />
+            <label> <input type="checkbox" id="chk" checked /> Li e aceito os termos desse contrato </label> <br />
+
+            <input type="submit" value="continuar" id="btn" style="display: none" />
+        </form>
+
+        <script>
+            (() => {
+                "use strict";
+
+                var $btn = document.querySelector("#btn");
+                var $chk = document.querySelector("#chk");
+                $btn.style.display = "unset";
+
+                toggleBtn();
+
+                $chk.addEventListener("change", function () {
+                    /* 
+                    if (this.checked) {
+                        $btn.disabled = false;
+                    } else {
+                        $btn.disabled = true;
+                    } 
+                    */
+
+                    toggleBtn();
+                });
+
+                function toggleBtn() {
+                    $btn.disabled = !$chk.checked;
+                }
+            })();
+        </script>
+    </body>
+</html>

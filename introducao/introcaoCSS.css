@@ -1,0 +1,31 @@
+body {
+    background-color:lightgrey;
+}
+
+h1{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    text-align: center;
+}
+
+h2{
+    font-size: 38px;
+    text-transform:capitalize;
+    text-align: center;
+    text-decoration:underline;
+    background-color: gold;
+}
+p {
+    text-indent: 58px;
+    font-size: 28px;
+    text-align: left;
+     color: #667700; 
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+a{
+    text-decoration:wavy;
+    font-variant: normal;
+}

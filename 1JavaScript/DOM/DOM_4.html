@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+
+        <input type="text" id="txtNome" />
+        <button onclick="escreve()">só clica</button>
+        <div id="msg"></div>
+
+        <script>
+            var txtNome2 = document.querySelector("#txtNome");
+
+            function escreve() {
+                var nome = txtNome2.value;
+                document.querySelector("#msg").innerHTML = "bem-vindo, <b>" + nome + "</b";
+            }
+
+            //NOTA **** sempre que eu precisar buscar informação de um elemento imput, será usado o VALUE ao inves de 'innerHTML' e 'textContent'
+        </script>
+    </body>
+</html>

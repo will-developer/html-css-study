@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Roboto&display=swap");
+
+:root {
+    --purple-color: hsl(288, 94%, 21%);
+    --white-font: #f6f6f6;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--white-font);
+    font-size: 1.6rem;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.empress-logo {
+    margin: 1rem auto;
+    width: 55%;
+}
+
+.indication-header {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.indication-header a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 1.4rem;
+    background-color: var(--purple-color);
+    color: var(--white-font);
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 3px rgba(198, 18, 230, 0.5);
+}
+
+.indication-header a:hover {
+    background-color: hsla(292, 11%, 73%, 0.413);
+    border: 1px solid rgba(187, 68, 177, 0.264);
+    color: var(--purple-color);
+}
+
+.main {
+    font-family: "inter", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.section-top-page {
+    text-align: center;
+}
+
+.section-top-page svg {
+    display: none;
+}
+
+.section-top-page h1 {
+    font-size: 1.6em;
+    margin: 0;
+    padding: 4rem 0 3rem;
+    color: var(--purple-color);
+}
+
+.section-top-page p {
+    color: var(--purple-color);
+    margin: 0;
+    padding: 0;
+}
+
+.section-top-page .btn {
+    display: inline-block;
+    margin: 2rem;
+    padding: 2rem 4rem;
+    background-color: rgb(72, 189, 189);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: lighter;
+    text-shadow: 1px 1px 3px rgba(198, 18, 230, 0.635);
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.section-top-page .btn:hover {
+    background-color: rgb(207, 207, 207);
+    color: purple;
+    text-shadow: 2px 2px 3px rgba(251, 251, 251, 0.635);
+    border: 1px solid var(--purple-color);
+    box-shadow: 0 0 20px rgba(195, 3, 248, 0.3);
+}
+
+.info-mid-page {
+    padding: 1rem 2rem 4rem;
+    background-color: rgb(205, 204, 204);
+    text-align: center;
+}
+
+.info-mid-page svg {
+    width: 5rem;
+    height: 5rem;
+    padding: 3rem 0 0;
+    fill: var(--purple-color);
+}
+
+.info-mid-page h2 {
+    color: var(--purple-color);
+    text-transform: uppercase;
+}
+
+.info-mid-page p {
+    margin: 0;
+}
+
+.info-imagens-ambient {
+    margin: 3rem 3rem;
+    padding-top: 4rem;
+}
+
+.mid-link {
+    text-decoration: none;
+    color: unset;
+}
+
+.info-imagens-ambient-article img {
+    width: 100%;
+}
+
+.info-imagens-ambient-article h2 {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: lighter;
+    color: var(--purple-color);
+    padding: 3rem 0 2.5rem;
+}
+
+.info-imagens-ambient-article p {
+    margin: 0 0 8rem;
+}
+
+.footer {
+    background-color: #161313;
+    color: var(--white-font);
+    padding: 6rem 3rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.footer h2 {
+    text-align: center;
+    margin: 0 0 2rem;
+    font-size: 1em;
+}
+
+.footer h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 1em;
+}
+
+@media screen and (min-width: 50rem) {
+    .container-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .indication-header {
+        display: flex;
+        gap: 0.6em;
+    }
+
+    .empress-logo {
+        margin: 0;
+        width: 30%;
+        display: block;
+    }
+
+    .display-header {
+        padding-right: 1.5rem;
+    }
+
+    .indication-header a {
+        background-color: transparent;
+        color: var(--purple-color);
+        font-size: 1.4em;
+    }
+
+    .indication-header a:hover {
+        border-radius: 10px;
+        color: var(--purple-color);
+    }
+
+    .section-top-page {
+        background-color: var(--purple-color);
+        padding: 2rem;
+    }
+
+    .section-top-page svg {
+        display: inline-block;
+        fill: var(--white-font);
+        width: 10rem;
+    }
+
+    .section-top-page h1 {
+        padding-top: 1rem;
+    }
+
+    .section-top-page h1,
+    .section-top-page p {
+        color: white;
+        font-weight: bold;
+    }
+
+    .section-top-page .btn {
+        margin-bottom: 0;
+    }
+
+    .info-mid-page {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .article-info-mid-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 0 36rem;
+    }
+
+    .info-imagens-ambient {
+        margin: 4rem auto 1rem;
+        padding: 0 3rem;
+    }
+
+    .info-imagens-ambient-article {
+        display: flex;
+        gap: 2rem;
+        padding-bottom: 3rem;
+    }
+
+    .info-imagens-ambient-article img {
+        width: 40%;
+    }
+
+    .info-imagens-ambient-article h2 {
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-width: 72em) {
+    .main {
+        line-height: 1.5;
+    }
+    .section-top-page {
+        background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.989)), url(../images/bg_topo_1198x670.jpg);
+        padding: 0 4rem;
+        background-size: cover;
+    }
+
+    .section-top-page svg {
+        padding: 30rem 0 0;
+    }
+
+    .section-top-page .btn {
+        margin-bottom: 10rem;
+    }
+
+    .info-mid-page {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .article-info-mid-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 0 50rem;
+    }
+}
+
+@media screen and (min-width: 90em) {
+    .empress-logo {
+        width: 18%;
+        padding-left: 2.5rem;
+    }
+
+    .indication-header {
+        gap: 2rem;
+    }
+
+    .indication-header a {
+        padding: 1.5rem 2rem;
+        font-size: 1.5em;
+        display: block;
+    }
+
+    .indication-header a:hover {
+        padding: 1.5rem 2rem;
+    }
+    .section-top-page {
+        background-image: linear-gradient(transparent, rgb(2, 1, 1)), url(../images/bg_topo_1600x1374\ 1.svg);
+        background-size: cover;
+        padding: 0 38rem;
+    }
+
+    .section-top-page svg {
+        padding: 36rem 0 0;
+        width: 20rem;
+    }
+
+    .section-top-page h1 {
+        font-size: 2.6em;
+        padding: 4rem;
+    }
+
+    .section-top-page p {
+        font-size: 1.4em;
+        padding-bottom: 1rem;
+    }
+
+    .section-top-page .btn {
+        margin-bottom: 15rem;
+    }
+
+    .info-mid-page {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .article-info-mid-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 0;
+    }
+
+    .info-imagens-ambient {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 3rem;
+        padding: 0 5rem 3rem 5rem;
+    }
+
+    .info-imagens-ambient-article {
+        flex: 0 0 48%;
+        padding-bottom: 0;
+        display: flex;
+    }
+
+    .info-imagens-ambient-article img {
+        width: 30%;
+        height: 30%;
+    }
+
+    .info-imagens-ambient-article p {
+        margin-bottom: 0;
+    }
+
+    .footer {
+        padding: 6rem 4rem;
+    }
+
+    .footer h2 {
+        font-size: 1.2em;
+    }
+}

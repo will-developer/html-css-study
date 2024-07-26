@@ -1,0 +1,86 @@
+html,
+body {
+    height: 100%;
+
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.container {
+    height: 350px;
+    width: 450px;
+    background-color: white;
+    overflow-y: scroll;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+
+
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.138);
+    padding: 10px;
+    flex-direction: row
+}
+
+.chat:hover {
+    background-color: rgba(0, 0, 0, 0.089);
+}
+
+.chat img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+
+}
+
+.tituloprincipal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.info {
+    margin-top: -30px;
+    text-align: start;
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.info h2,
+.info p {
+    margin: 2px 0;
+}
+
+.info p {
+    color: rgba(0, 0, 0, 0.477);
+}
+
+.item__small {
+    display: flex;
+}
+
+.item__small img {
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    opacity: 0.5;
+    border-radius: 0;
+    visibility: hidden;
+}
+
+.chat:hover .item__small img {
+    visibility: visible;
+}

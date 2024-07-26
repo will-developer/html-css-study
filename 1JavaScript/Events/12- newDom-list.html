@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .Done {
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <input type="text" id="txtTask" />
+        <button id="btn">Cadastrar Tarefa</button>
+
+        <ul>
+            <li>Estudar Javascript - DOM</li>
+            <li>Estudar Eventos em JavaScript</li>
+            <li>Jogar video-game</li>
+        </ul>
+
+        <script>
+            (() => {
+                "use strict";
+
+                var $ul = document.querySelector("ul");
+                var $lis = $ul.querySelectorAll("li");
+                var $txtTask = document.querySelector("#txtTask");
+                var $btn = document.querySelector("#btn");
+
+                $btn.addEventListener("click", addtask);
+                $txtTask.addEventListener("keyup", function (e) {
+                    if (e.keyCode === 13) {
+                        addtask();
+                    }
+                });
+
+                for (var i = 0; i < $lis.length; i++) {
+                    addEvent($lis[i]);
+                }
+
+                function toggledone() {
+                    this.classList.toggle("Done");
+                }
+
+                function addtask() {
+                    // var task = `<li> ${$txtTask.value} </li>`;
+
+                    var li = document.createElement("li");
+                    var text = document.createTextNode($txtTask.value);
+
+                    li.appendChild(text);
+
+                    $ul.appendChild(li);
+
+                    $txtTask.value = "";
+                    $txtTask.focus();
+
+                    addEvent(li);
+                }
+
+                function addEvent(li) {
+                    li.addEventListener("click", toggledone);
+                }
+            })();
+        </script>
+    </body>
+</html>

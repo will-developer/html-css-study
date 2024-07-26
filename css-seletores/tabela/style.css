@@ -1,0 +1,14 @@
+label {
+    display: block;
+    margin: 1rem;
+}
+
+div {
+    display: flex;
+    margin-top: -1rem;
+    margin-left: 0.3rem;
+}
+
+div input{
+    margin-left: -1.5em;
+}

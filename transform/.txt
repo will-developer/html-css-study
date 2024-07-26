@@ -1,0 +1,39 @@
+        .chk1, .lbl2>input {
+            display: none;
+        }
+
+        .chk1+label span, .lbl2+input[checkbpx] span{
+            display: inline-block;
+            font-size: 1rem;
+            width: 1.5em;
+            height: 1.5em;
+            background-color: red;
+            border-radius: 4px;
+        }
+
+        .chk1+label span::before {
+            opacity: 0;
+        }
+
+        .chk1+label span::before {
+            display: inline-block;
+            content: '\2713';
+            font-size: 1em;
+            color: rgb(255, 255, 255);
+            transform: translate(50%, 1px);
+        }
+
+        .chk1:checked+label span {
+            display: inline-block;
+            background-color: blue;
+            border-radius: 4px;
+        }
+
+        .chk1:checked+label span::before {
+            opacity: 1;
+        }
+
+        <label class="lbl2">
+            <input type="checkbox">
+            JavaScript
+        </label>

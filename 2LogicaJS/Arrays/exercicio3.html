@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Logica</title>
+    </head>
+    <body>
+        <h1>Logica de programação com JavaScript</h1>
+
+        <div id="output"></div>
+
+        <script>
+            var cadastro = [
+                { nome: "William", email: "william_limaa@hotmail.com" },
+                { nome: "Rafael", email: "rafael_cabral@hotmail.com" },
+            ]
+
+            var msg = ""
+
+            for (var i = 0; i < cadastro.length; i++) {
+                msg += "<h2>nome: " + cadastro[i].nome + "</h2>"
+                msg += "<h2>email: " + cadastro[i].email + "</h2>"
+            }
+
+            document.querySelector("#output").innerHTML = msg
+        </script>
+    </body>
+</html>

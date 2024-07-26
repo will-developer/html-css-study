@@ -1,0 +1,13 @@
+@media print{
+    body{
+        color: black;
+        font-family: serif;
+    }
+}
+
+a::after{
+    /* content: "( link href )"; dessa forma vai aparecer o que esta no parenteses no browse, como se fosse um "printf" */
+    content: "(" attr(href) ") - (" attr(title) ")"; /* < isso é uma função, agora aparecera o link no after */
+    display: inline-block;
+    margin-left: .5em;
+}

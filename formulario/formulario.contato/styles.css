@@ -1,0 +1,87 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: rgb(18, 17, 17);
+    color: rgb(241, 240, 240);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 65vh;
+}
+
+.title {
+    border: none;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 3rem;
+    color: rgb(240, 186, 119);
+}
+
+.formulary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.border {
+    border: 1px rgba(0, 0, 0, 0.45) solid;
+    background-color: rgb(40, 38, 36);
+}
+
+label {
+    font-size: 1.8rem;
+    padding: 0rem 0 1rem;
+    margin: 0 1rem 0;
+}
+
+.tam {
+    height: 4.5rem;
+    margin: 0 1rem 0;
+}
+
+.msg {
+    margin: 0 1rem 0;
+    resize:none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.square {
+    background-color: rgba(0, 0, 0, 0.694);
+    outline: none;
+    border: none;
+    border-bottom: 2px rgb(177, 169, 169) solid;
+    margin-bottom: 1.3rem;
+    color: white;
+    padding: 0 1.5rem 0;
+}
+
+.square:invalid:invalid:focus {
+    border-bottom: red solid 2px;
+}
+
+.square:valid:focus {
+    border-bottom: rgb(30, 255, 0) solid 2px;
+}
+
+.square:invalid:focus {
+    border-bottom: 2px rgb(177, 169, 169) solid;
+}
+
+.btn{
+    text-align: end;
+    padding: 2rem 0;
+}
+.btn button{
+    margin: 0 1rem 0;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+}

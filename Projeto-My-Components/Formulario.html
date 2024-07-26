@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyComponents</title>
+    <link rel="stylesheet" href="css/necolas.github.io_normalize.css_8.0.1_normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header-content-left">
+        <img class="header-image" src="imagens/Design sem nome.png" alt="Foto de perfil">
+        <nav class="display-header">
+            <ul class="itens-display-header">
+                <li><a href="index.html"><b>Home</b></a></li>
+                <li><a href="Tipografia.html">Tipografia</a></li>
+                <li><a href="Cards.html">Cards</a></li>
+                <li><a href="Listas.html">Listas</a></li>
+                <li class="current-page"><a href="Formulario.html">Formulário</a></li>
+                <li><a href="botões.html">Botões</a></li>
+                <li><a href="tabelas.html">Tabelas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1 class="main-title">My Components</h1>
+
+        <article class="hightlight">
+            <h2>Formulário</h2>
+            <p>Definições de caixa de textos e botões que enviam informações para serem trabalhadas no back-end</p>
+        </article>
+
+        <section>
+            <h3>Entre em contato</h3>
+            <form action="">
+                <div class="row">
+                    <div class="column">
+                        <div class="rowdiv">
+                            <div class="label">
+                                <label for="Nome">Nome</label>
+                                <input class="input-height" type="text" name="nome" placeholder="Nome Completo">
+                            </div>
+
+                            <div class="label">
+                                <label for="Email">E-mail</label>
+                                <input class="input-height" type="email" name="email" placeholder="seu_email@mail.com">
+                            </div>
+                        </div>
+
+                        <div class="label">
+                            <label for="textarea">Digite sua mensagem</label>
+                            <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <button type="submit" class="buttom">Enviar</button>
+
+                    </div>
+
+                    <div class="label">
+                        <address><div>Endereço - 1234 Somewhere RD. Nashville, TN 00000 United States</div>
+                        <div>Telefone - 000-000-000</div>
+                        <div>Email - email@server.com</div></address>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h3 class="h3-top">Quiz</h3>
+            <form action="">
+                <div class="row">
+                    <div class="label">
+                        <label for="select">Qual é a sua linguagem preferida</label>
+                        <select name="linguagem" required>
+                            <option value="">Selecione uma</option>
+                            <optgroup label="frontend">
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="js">Javascript</option>
+                            </optgroup>
+                            <optgroup label="backend">
+                                <option value="java">Java</option>
+                                <option value="python">Python</option>
+                            </optgroup>
+                        </select>
+
+                        <label for="radio"> Baixa Prioridade
+                            <input type="radio" name="prioridade" value="low" class="radio">
+                        </label>
+                        <label for="radio"> Média Prioridade
+                            <input type="radio" name="prioridade" value="low" class="radio">
+                        </label>
+                        <label for="radio"> Alta Prioridade
+                            <input type="radio" name="prioridade" value="low" class="radio">
+                        </label>
+
+                        <label for="checkbox"><input type="checkbox"> Envie-me uma cópia</label>
+                        <label for="checkbox"><input type="checkbox"> Não sou um robo</label>
+
+                        <div class="rowdiv">
+                            <button type="reset" class="buttom  limpar">Limpar</button>
+                            <button type="submit" class="buttom  enviar">Enviar</button>
+                        </div>
+                    </div>
+
+                    <p></p>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

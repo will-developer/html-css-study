@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Curso JavaScript</h1>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime fugiat commodi deserunt ipsam accusamus pariatur quidem culpa laboriosam, alias impedit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime fugiat commodi deserunt ipsam accusamus pariatur quidem culpa laboriosam, alias impedit.</p>
+
+        <p>Lorempariatur quidem culpa laboriosam, alias impedit.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime fugiat commodi deserunt ipsam accusamus pariatur quidem culpa laboriosam, alias impeditsum, dolor sit amet consecte.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime fugiat commodi deserunt ipsam accusamus pariatur quidem culpa laboriosam, alias impeditariatur quidem culpa laboriosam, alias.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime fugiat commodi deserunt ipsam accusamus p impedit.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing .</p>
+
+        <script>
+            let $paragraph = document.querySelectorAll("p");
+
+            for (let i = 0; i < $paragraph.length; i++) {
+                let arr = $paragraph[i].textContent;
+                let split = arr.split(" ");
+
+                if (split.length > 10) {
+                    let slice = split.slice(0, 10);
+                    slice.push("[...]");
+                    $paragraph[i].textContent = slice;
+                }
+            }
+        </script>
+    </body>
+</html>

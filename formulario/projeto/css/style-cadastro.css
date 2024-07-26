@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Maven+Pro:wght@400;600;800&family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --blue: #3a68b7;
+}
+
+html {
+    font-size: 69.5%;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--blue);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border {
+    background-color: white;
+    box-shadow: -10px -2px 0px rgba(0, 0, 0, 0.227), 2px 2px 0px rgba(0, 0, 0, 0.227);
+    padding: 2.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.title {
+    text-align: left;
+    padding: 2rem 0 1rem;
+    color: var(--blue);
+    font-size: 3.2rem;
+    font-weight: 300;
+}
+
+.info {
+    text-transform: uppercase;
+    padding: 1.5rem 0;
+    font-size: 1.4rem;
+}
+
+.retangle {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--blue);
+    font-size: 1.6rem;
+}
+
+.retangle:focus {
+    border: 2px solid var(--blue);
+    padding: 1.2rem 1rem;
+    margin-top: -1rem;
+}
+
+.footer {
+    display: flex;
+    margin: 2.5rem 0 1.5rem;
+    justify-content: space-between;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: var(--blue);
+    color: white;
+    font-size: 2rem;
+    padding:1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-cadastro{
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: white;
+    color: var(--blue);
+    font-size: 2rem;
+    padding: 1.5rem;
+    text-decoration: none;
+
+}
+
+.password{
+    margin: auto;
+    flex-grow: 1;
+    text-align: end;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Desafio calculadora</title>
+        <style>
+            body {
+                background-image: linear-gradient(to right, #4e27b9, #398a55 60%);
+            }
+
+            .grid-container {
+                width: 22rem;
+                height: 33rem;
+                padding: 1.5rem 1.5rem;
+                margin: calc(50vh - 18rem) auto;
+                background-color: rgb(58, 64, 36);
+                box-shadow: 1px 1px 15px black, -1px -1px 15px black;
+                border-radius: 5px;
+                display: grid;
+                gap: .8rem;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: minmax(100px, 1fr) repeat(5, minmax(0, 1fr));
+                grid-template-areas:
+                    "visor   visor  visor  visor"
+                    "ac     porc    xis   barra"
+                    "sete   oito   nove   igual"
+                    "quatro cinco  seis   tracinho"
+                    "um      dois   tres    mais"
+                    "zero     zero   virg    mais";
+            }
+
+            .grid-itens {
+                color: white;
+                padding: 15px;
+                font-family: sans-serif;
+                background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(45, 45, 45));
+                box-shadow: -0.5px -0.5px 1px, 1px 1px 0px black;
+                font-size: 1.4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+            .grid-itens:nth-child(1) {
+                grid-area: visor;
+                font-size: 2rem;
+                justify-content: flex-end;
+                margin-bottom: 20px;
+            }
+            .grid-itens:nth-child(2) {
+                grid-area: ac;
+            }
+            .grid-itens:nth-child(3) {
+                grid-area: porc;
+            }
+            .grid-itens:nth-child(4) {
+                grid-area: xis;
+            }
+            .grid-itens:nth-child(5) {
+                grid-area: barra;
+            }
+            .grid-itens:nth-child(6) {
+                grid-area: sete;
+            }
+            .grid-itens:nth-child(7) {
+                grid-area: oito;
+            }
+            .grid-itens:nth-child(8) {
+                grid-area: nove;
+            }
+            .grid-itens:nth-child(9) {
+                grid-area: igual;
+            }
+            .grid-itens:nth-child(10) {
+                grid-area: quatro;
+            }
+            .grid-itens:nth-child(11) {
+                grid-area: cinco;
+            }
+            .grid-itens:nth-child(12) {
+                grid-area: seis;
+            }
+            .grid-itens:nth-child(13) {
+                grid-area: tracinho;
+            }
+            .grid-itens:nth-child(14) {
+                grid-area: um;
+            }
+            .grid-itens:nth-child(15) {
+                grid-area: dois;
+            }
+            .grid-itens:nth-child(16) {
+                grid-area: tres;
+            }
+            .grid-itens:nth-child(17) {
+                grid-area: mais;
+                font-size: 1.8rem;
+            }
+            .grid-itens:nth-child(18) {
+                grid-area: zero;
+            }
+            .grid-itens:nth-child(19) {
+                grid-area: virg;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-itens"><p>0</p></div>
+            <div class="grid-itens"><p>AC</p></div>
+            <div class="grid-itens"><p>%</p></div>
+            <div class="grid-itens"><p>x</p></div>
+            <div class="grid-itens"><p>/</p></div>
+            <div class="grid-itens"><p>7</p></div>
+            <div class="grid-itens"><p>8</p></div>
+            <div class="grid-itens"><p>9</p></div>
+            <div class="grid-itens"><p>=</p></div>
+            <div class="grid-itens"><p>4</p></div>
+            <div class="grid-itens"><p>5</p></div>
+            <div class="grid-itens"><p>6</p></div>
+            <div class="grid-itens"><p>-</p></div>
+            <div class="grid-itens"><p>1</p></div>
+            <div class="grid-itens"><p>2</p></div>
+            <div class="grid-itens"><p>3</p></div>
+            <div class="grid-itens"><p>+</p></div>
+            <div class="grid-itens"><p>0</p></div>
+            <div class="grid-itens"><p>,</p></div>
+        </div>
+    </body>
+</html>

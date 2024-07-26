@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <style>
+        .none {
+            display: none;
+        }
+    </style>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <textarea name="" id="msg" cols="50" rows="10" maxlength="150"></textarea>
+        <br />
+        <div class="none">Restam <span id="resta"></span> caracteres</div>
+
+        <script>
+            (() => {
+                "use strict";
+
+                var $txtMsg = document.querySelector("#msg");
+                var $resta = document.querySelector("#resta");
+                var $none = document.querySelector(".none");
+                var maxima = $txtMsg.maxLength;
+
+                function mostrarContainerResta() {
+                    $none.style.display = "unset";
+                }
+
+                mostrarContainerResta();
+
+                mostrarCaracteresRestantes(maxima);
+
+                $txtMsg.addEventListener("input", checkLenght);
+
+                function checkLenght(e) {
+                    var numeroLetrasDigitadas = this.value.length;
+                    var caracteresRestantes = Number(maxima - numeroLetrasDigitadas);
+                    mostrarCaracteresRestantes(caracteresRestantes);
+                }
+
+                function mostrarCaracteresRestantes(n) {
+                    $resta.textContent = n;
+                }
+            })();
+        </script>
+    </body>
+</html>

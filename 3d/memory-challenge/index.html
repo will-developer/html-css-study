@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>jogo da memoria</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                background-image: radial-gradient(circle at center, rgb(255, 102, 0) 100px, rgb(55, 108, 8));
+                margin: 0;
+            }
+
+            .container {
+                width: 48rem;
+                height: 45rem;
+                margin: calc(50vh - (45rem / 2) - (4rem / 2)) auto;
+                background-color: #f6f6f6;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 2rem;
+            }
+
+            .grid-container {
+                width: 100%;
+                flex: 1 0 auto;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+            }
+
+            .grid-container .card {
+                border: 2px solid rgb(255, 0, 0);
+                border-radius: 10px;
+            }
+
+            .container h1 {
+                margin-top: 1rem;
+                margin-bottom: 2.5rem;
+                font-size: 3em;
+                font-weight: lighter;
+            }
+
+            .cena {
+                perspective: 600px;
+                position: absolute;
+                display: none;
+            }
+
+            .card {
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transition: 0.5s transform;
+                position: relative;
+                transform-origin: center;
+            }
+
+                 .cena:checked + .card {
+                transform: rotatey(180deg);
+            }
+
+            .card_face {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                overflow: hidden;
+            }
+
+            .card_face-front img,
+            .card_face-back img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+
+            .card_face-back {
+                transform: rotatey(180deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Jogo da Memória</h1>
+            <div class="grid-container">
+
+                <input type="checkbox" name="1" id="1" class="cena" />
+                <label for="1" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/01.png" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="2" id="2" class="cena" />
+                <label for="2" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/03.jpg" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="3" id="3" class="cena" />
+                <label for="3" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/04.png" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="4" id="4" class="cena" />
+                <label for="4" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/01.png" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="5" id="5" class="cena" />
+                <label for="5" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/05.png" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="6" id="6" class="cena" />
+                <label for="6" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/02.jpg" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="7" id="7" class="cena" />
+                <label for="7" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/03.jpg" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="8" id="8" class="cena" />
+                <label for="8" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/04.png" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="9" id="9" class="cena" />
+                <label for="9" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/02.jpg" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="10" id="10" class="cena" />
+                <label for="10" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/06.jpg" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="11" id="11" class="cena" />
+                <label for="11" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/07.jpg" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="12" id="12" class="cena" />
+                <label for="12" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/05.png" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="13" id="13" class="cena" />
+                <label for="13" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/08.jpg" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="14" id="14" class="cena" />
+                <label for="14" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/08.jpg" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="15" id="15" class="cena" />
+                <label for="15" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/06.jpg" alt="" /></div>
+                </label>
+
+                <input type="checkbox" name="16" id="16" class="cena" />
+                <label for="16" class="card">
+                    <div class="card_face card_face-front"><img src="img/back.png" alt="" /></div>
+                    <div class="card_face card_face-back"><img src="img/07.jpg" alt="" /></div>
+                </label>
+            </div>
+        </div>
+    </body>
+</html>

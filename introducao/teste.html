@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp</title>
+
+    <style>
+        /* Estilos para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilos para o container principal */
+        .container {
+            width: 450px;
+            height: 350px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        /* Estilos para a barra de navegação */
+        .navbar {
+            background-color: #075e54;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Estilos para a lista de conversas */
+        .chat-list {
+            height: 220px;
+            overflow-y: scroll;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para cada item da lista de conversas */
+        .chat-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Estilos para a foto do contato */
+        .contact-photo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Estilos para o nome e a última mensagem do contato */
+        .contact-name,
+        .last-message {
+            font-weight: bold;
+        }
+
+        /* Estilos para a caixa de mensagem */
+        .message-box {
+            background-color: #fff;
+            padding: 10px;
+        }
+
+        /* Estilos para o campo de texto da mensagem */
+        .message-input {
+            width: 100%;
+            padding: 5px;
+        }
+
+        /* Estilos para o botão de enviar mensagem */
+        .send-button {
+            background-color: #075e54;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>WhatsApp</h1>
+        </div>
+
+        <div class="chat-list">
+            <div class="chat-item">
+                <img class="contact-photo" src="contact1.jpg" alt="Contact 1">
+                <div>
+                    <p class="contact-name">Contact 1</p>
+                    <p class="last-message">Last message from Contact 1</p>
+                </div>
+            </div>
+            <div class="chat-item">
+                <img class="contact-photo" src="contact2.jpg" alt="Contact 2">
+                <div>
+                    <p class="contact-name">Contact 2</p>
+                    <p class="last-message">Last message from Contact 2</p>
+                </div>
+            </div>
+            <!-- Adicione mais itens de conversa aqui -->
+        </div>
+
+        <div class="message-box">
+            <input class="message-input" type="text" placeholder="Digite sua mensagem">
+            <button class="send-button">Enviar</button>
+        </div>
+    </div>
+</body>
+
+</html>

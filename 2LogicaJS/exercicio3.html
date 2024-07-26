@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Lógica de programação com JavaScript</h1>
+
+        <script>
+            var nJogador1 = prompt("numero do jogador 1")
+            nJogador1 = parseInt(nJogador1)
+
+            var nJogador2 = prompt("numero do jogador 2")
+            nJogador2 = parseInt(nJogador2)
+
+            if (nJogador1 === nJogador2) {
+                alert("voces empataram")
+            } else {
+                var nSorteado = parseInt(Math.random() * 2)
+
+                if (nSorteado === 0) {
+                    if (nJogador1 < nJogador2) {
+                        alert("ganhou o jogador 1")
+                    } else {
+                        alert("ganhou o jogador 2")
+                    }
+                } else {
+                    if (nJogador1 > nJogador2) {
+                        alert("ganhou o jogador 1")
+                    } else {
+                        alert("ganhou o jogador 2")
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

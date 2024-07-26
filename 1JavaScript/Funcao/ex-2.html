@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <script>
+            (function () {
+                function calculateIMC(weight, height) {
+                    var x = 0;
+
+                    return weight / (height * height);
+                }
+                var IMC = calculateIMC(56, 1.71);
+
+                function classification() {
+                    var message;
+                    switch (true) {
+                        case IMC <= 16.9:
+                            message = "Very underweight";
+                            break;
+                        case IMC <= 18.4:
+                            message = "Underweight";
+                            break;
+                        case IMC <= 24.9:
+                            message = "Normal weight";
+                            break;
+                        case IMC <= 29.9:
+                            message = "Overweight";
+                            break;
+                        case IMC <= 34.9:
+                            message = "Obesity Class 1 (Moderate)";
+                            break;
+                        case IMC <= 39.9:
+                            message = "Obesity Class 2 (Severe)";
+                            break;
+                        default:
+                            message = "Obesity Class 3 (Very Severe)";
+                    }
+                    console.log(message);
+                }
+
+                console.log("IMC: ", IMC);
+
+                classification();
+            })();
+        </script>
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+    </body>
+</html>
